@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<title>Parallax Scrolling website | Vanilla Javascript</title>
+<link rel="stylesheet" type="text/css" href=indexhome.css>
+</head>
+<body>
+<header>
+<a herf="#" class="logo">FREEZE</a>
+<ul>
+    <li><a herf ="#" class="active">Home</a></li>
+    <li><a link rel href ="indexmenu.html">Menu</a></li>
+    <li><a link rel href ="index.html">Log In</a></li>
+    </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">BRAIN FREEZE</h2>
+        <a href="indexmenu.html" id="btn"> Explore Our Menu</a>
+        <img src="Icecream_front.png" id="Icecream_front">
+    </section>
+    
+    <div class="sec" id="sec">
+        <h2>About us</h2>                                                                                                                                                                                                       
+        <p> 
+            At Freeze, we are committed to providing a delightful ice cream delivery experience for our customers while upholding our core values of customer satisfaction, innovation, integrity, and teamwork. 
+            Our mission is to prioritize customer satisfaction and loyalty, while our vision is to become the leading ice cream delivery service known for our exceptional customer service and user-friendly platform. 
+            With a dedicated team of professionals who are passionate about delivering high-quality ice cream and exceptional customer service, Freeze is here to make your ice cream cravings a reality.
+        </p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let btn = document.getElementById('btn');
+        let text = document.getElementById('text');
+        let Icecream_front = document.getElementById('Icecream_front');
+        let header = document.querySelector('header')
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY
+            stars.style.left = value *0.25 + 'px';
+            moon.style.top = value *1.05 + 'px';
+            mountains_behind.style.top = value *0.5 + 'px';
+            Icecream_front.style.top = value *0 + 'px';
+            text.style.marginRight = value *2.5 + 'px';
+            text.style.marginTop = value *1.5 + 'px';
+            btn.style.marginTop = value *1.5 + 'px';
+            header.style.top = value *0.5 + 'px';
+        })
+    </script>
+    </body>
+    </html>
